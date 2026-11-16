@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>離心率｜橢圓小百科</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script>window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../../index.html">橢圓小百科</a>
+      <a href="../../index.html">← 回首頁</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <header class="note-header" data-cat="properties">
+      <span class="course-label">性質</span>
+      <h1>離心率</h1>
+    </header>
+
+    <article>
+      <section class="summary">
+        <h2>重點</h2>
+        <ul>
+          <li>離心率 \(e=\dfrac{c}{a}\)，範圍是 \(0\le e&lt;1\)。</li>
+          <li>\(e\) 越接近 0 越圓，越接近 1 越扁。</li>
+          <li>\(e=0\) 時兩個焦點重合，變成圓。</li>
+        </ul>
+      </section>
+
+      <div class="box def">
+        <p class="box-title">定義：離心率</p>
+        <p>橢圓的離心率（eccentricity）定義為焦距和長軸的比：\(e=\dfrac{c}{a}\)。</p>
+      </div>
+
+      <div class="box thm">
+        <p class="box-title">公式：用 a、b 表示</p>
+        <p>\[ e=\frac{\sqrt{a^2-b^2}}{a}=\sqrt{1-\frac{b^2}{a^2}} \]</p>
+      </div>
+
+      <div class="box ex">
+        <p class="box-title">例題</p>
+        <p>求 \(\dfrac{x^2}{25}+\dfrac{y^2}{9}=1\) 的離心率。</p>
+        <p><strong>解：</strong>\(c=4\)，所以 \(e=\dfrac{4}{5}=0.8\)，算是蠻扁的橢圓。</p>
+      </div>
+    </article>
+
+    <nav class="pager" id="pager"></nav>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 周家碩 · 中山應數</div></footer>
+  <script src="../../assets/pages.js"></script>
+  <script src="../../assets/main.js"></script>
+</body>
+</html>

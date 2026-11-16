@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- 新頁面範本：複製到 pages/<分類>/ 後，把 {{ }} 換掉 -->
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{標題}}｜橢圓小百科</title>
+  <link rel="stylesheet" href="../../assets/style.css">
+  <script>window.MathJax = { tex: { inlineMath: [["\\(", "\\)"]] } };</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="site-title" href="../../index.html">橢圓小百科</a>
+      <a href="../../index.html">← 回首頁</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <header class="note-header" data-cat="{{分類id}}">
+      <span class="course-label">{{分類名稱}}</span>
+      <h1>{{標題}}</h1>
+    </header>
+
+    <article>
+      <section class="summary">
+        <h2>重點</h2>
+        <ul>
+          <li>{{重點1}}</li>
+          <li>{{重點2}}</li>
+        </ul>
+      </section>
+
+      <div class="box def">
+        <p class="box-title">定義：{{名稱}}</p>
+        <p>{{內容}}</p>
+      </div>
+
+      <div class="box thm">
+        <p class="box-title">公式：{{名稱}}</p>
+        <p>{{內容}}</p>
+      </div>
+
+      <div class="box ex">
+        <p class="box-title">例題</p>
+        <p>{{題目}}</p>
+        <p><strong>解：</strong>{{解答}}</p>
+      </div>
+    </article>
+
+    <nav class="pager" id="pager"></nav>
+  </main>
+
+  <footer class="site-footer"><div class="container">© 2026 周家碩 · 中山應數</div></footer>
+  <script src="../../assets/pages.js"></script>
+  <script src="../../assets/main.js"></script>
+</body>
+</html>
