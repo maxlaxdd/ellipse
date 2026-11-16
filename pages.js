@@ -11,19 +11,19 @@ const PAGES = [
   {
     cat: "basics",
     title: "橢圓的定義與標準式",
-    file: "pages/basics/definition.html",
+    file: "definition.html",
     summary: "到兩個焦點距離和固定的點，以及標準式。"
   },
   {
     cat: "properties",
     title: "離心率",
-    file: "pages/properties/eccentricity.html",
+    file: "eccentricity.html",
     summary: "用一個數字表示橢圓有多扁。"
   },
   {
     cat: "applications",
     title: "行星軌道",
-    file: "pages/applications/orbits.html",
+    file: "orbits.html",
     summary: "行星繞太陽的軌道是橢圓，太陽在焦點上。"
   }
 ];

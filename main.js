@@ -22,11 +22,11 @@ if (list) {
 
 const pager = document.getElementById("pager");
 if (pager) {
-  const here = location.pathname.split("/").slice(-3).join("/");
+  const here = location.pathname.split("/").pop() || "index.html";
   const i = PAGES.findIndex((p) => p.file === here);
   const prev = PAGES[i - 1];
   const next = PAGES[i + 1];
   pager.innerHTML =
-    (prev ? `<a href="../../${prev.file}"><small>← 上一篇</small>${prev.title}</a>` : "<span></span>") +
-    (next ? `<a class="next" href="../../${next.file}"><small>下一篇 →</small>${next.title}</a>` : "<span></span>");
+    (prev ? `<a href="${prev.file}"><small>← 上一篇</small>${prev.title}</a>` : "<span></span>") +
+    (next ? `<a class="next" href="${next.file}"><small>下一篇 →</small>${next.title}</a>` : "<span></span>");
 }

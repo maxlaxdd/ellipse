@@ -7,29 +7,33 @@ AI 在修改或新增內容前，請先讀完這份文件。
 這是一個介紹數學「橢圓」的小網站，一頁講一個主題，例如定義、離心率、行星軌道。
 網站用純 HTML、CSS、JavaScript 寫成，放在 GitHub Pages 上，不使用任何框架。
 
-## 資料夾結構
+## 檔案結構
+
+所有檔案都放在 repo 最外層，不分資料夾：
 
 ```
-index.html                 首頁（卡片自動產生，不要手動改）
-assets/style.css           全站樣式（只有這一個 CSS）
-assets/pages.js            頁面清單（新增頁面要改這裡）
-assets/main.js             產生首頁卡片和上一篇／下一篇
-templates/page-template.html  新頁面範本
-pages/basics/              基礎
-pages/properties/          性質
-pages/applications/        應用
+index.html           首頁（卡片自動產生，不要手動改）
+style.css            全站樣式（只有這一個 CSS）
+pages.js             頁面清單（新增頁面要改這裡）
+main.js              產生首頁卡片和上一篇／下一篇
+page-template.html   新頁面範本
+definition.html      內容頁（基礎）
+eccentricity.html    內容頁（性質）
+orbits.html          內容頁（應用）
 ```
+
+頁面屬於哪個分類，由 `pages.js` 裡的 `cat` 決定：`basics`（基礎）、`properties`（性質）、`applications`（應用）。
 
 ## 新增一頁的步驟
 
-1. 複製 `templates/page-template.html`，放到對應的分類資料夾。
+1. 複製 `page-template.html`，改成新的檔名。
 2. 把範本裡所有 `{{ }}` 換成實際內容。
-3. 在 `assets/pages.js` 的 `PAGES` 加一筆：
+3. 在 `pages.js` 的 `PAGES` 加一筆：
    ```js
    {
      cat: "properties",
      title: "頁面標題",
-     file: "pages/properties/檔名.html",
+     file: "檔名.html",
      summary: "一句話介紹"
    }
    ```
@@ -65,7 +69,7 @@ pages/applications/        應用
 ## AI 修改時要注意
 
 - 只改需要改的檔案：新增一頁通常只會動新的 HTML 和 `pages.js`。
-- 不要加新的 CSS 檔或其他套件。
+- 不要加新的 CSS 檔或其他套件，也不要建立資料夾。
 - 連結都用相對路徑。
 - 數學內容要正確，不確定就標「待確認」。
 - 做完確認：首頁有出現新卡片、公式顯示正常、上一篇／下一篇正確。
